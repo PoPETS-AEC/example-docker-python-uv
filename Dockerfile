@@ -1,9 +1,6 @@
-# Let's start from an official python docker image - feel free to update the tag
+# Let's start from an official docker image with uv - feel free to update the tag
 # as needed.
-FROM python:3.13.6-trixie
-
-# Copy the uv binary from the official image (pinned version, edit as needed)
-COPY --from=ghcr.io/astral-sh/uv:0.8.13 /uv /uvx /bin/
+FROM ghcr.io/astral-sh/uv:0.8.13-python3.11-trixie
 
 # Configure uv
 # ENV UV_COMPILE_BYTECODE=1
